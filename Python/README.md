@@ -158,4 +158,4 @@ returned_array = QuadSolver(a,b,c) # since my_array was returned from QuadSolver
 print(returned_array) # prints the roots that have been returned from the function
 ```
 
-Before doing this assignment, I didn't even know what an `array` was!
+Before doing this assignment, I didn't even know what an `array` was! *edit: it turns out I still didn't. Now I know that I had been using a `list` the whole time.* An ~~`array`~~ `list` is a collection of values stored together. Stored together like this, they can be manipulated as a group; for example, if they all were `int`s, a user could add one to every value in the ~~`array`~~ `list`. Alternatively (and more relevantly), values such as `root1` or `root2` can be stored inside a `list`, then printed together with `print(my_array)`.
