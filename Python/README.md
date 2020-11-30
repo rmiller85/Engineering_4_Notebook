@@ -116,7 +116,7 @@ print("Modulo:\t\t" + doMath(Num1,Num2,5)) # finds modulo
 
 Lessons learned: Integers don't have decimals! A modulo is the remainder of two numbers that are divided. I learned that `/t` creates a large blank space in a line. Also, I looked at Vann's code once or twice to help me through some blocks. [Here's his Github.](https://github.com/vwellmo57)
 
-## Quadratic Calculator
+## Quadratic Solver
 
 Oh how I would've killed for this in 9th grade. I created a program where, upon inputing coefficients, the user is given the real roots of a quadratic equation. The basis of this program was simple: the user inputs coefficients. These coefficients are run through a function that replicates the quadratic formula. The results are then returned and printed. However, there was one small wrench in the gears. The assignment required that the roots were put into an `array` and this array would be printed. Here's my finished code.
 
