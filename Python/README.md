@@ -159,3 +159,25 @@ print(returned_array) # prints the roots that have been returned from the functi
 ```
 
 Before doing this assignment, I didn't even know what an `array` was! *edit: it turns out I still didn't. Now I know that I had been using a `list` the whole time.* An ~~`array`~~ `list` is a collection of values stored together. Stored together like this, they can be manipulated as a group; for example, if they all were `int`s, a user could add one to every value in the ~~`array`~~ `list`. Alternatively (and more relevantly), values such as `root1` or `root2` can be stored inside a `list`, then printed together with `print(my_array)`.
+
+## Strings and Loops
+
+To demonstrate my understanding of lists, loops, and strings, I has to create a program where upon receiving a sentence from a user, the program returns each individual letter separately, with a hyphen accounting for spaces. It sounded fairly simple: just use the `split()` function. Of course, it's never that simple.
+
+```Python
+sent_original = input("Type a simple sentence and press enter.")
+sent_words = sent_original.split()
+final_list = []
+```
+
+First, the user's sentence is taken and stored in `sent_original`. Then, the string of the full sentence is broken into a list (called `sent_words`) of strings for each individual word. Finally, an empty list, `final_list`, is created. It's a surprise tool that will help us later. Next, splitting the words into characters.
+
+```Python
+for word in sent_words:
+  word += "-"
+  split_letters = list(word)
+  for letter in split_letters:
+    final_list.append(letter)
+```
+
+Now, the strings inside `sent_words` are processed through a `for` loop one at a time. First, a hyphen is added onto the end of each string. This would turn the string `"Hello"` into `"Hello-"`. This way, when `"Hello"` is split into individual characters, it becomes `['H','e','l','l','o','-']`, providing the space at the end of the word. Then, *another* list is created: `split_letters`. It is the list of all the characters in whichever word is currently being processed through the `for` loop. Also, turns out that `split()` doesn't do quite what I initially thought. It splits a string with multiple words into a list of strings. However, to split a string of one word into a list of characters, I needed the `list()` function. So now, `split_letters` has been defined as a list of the characters that make up a word in `sent_words`.
