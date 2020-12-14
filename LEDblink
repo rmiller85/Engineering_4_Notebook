@@ -1,0 +1,15 @@
+#GPIO Pins
+#by Meg Gist 
+#Stolen by Rowan
+
+declare -i c=10
+gpio mode 0 out
+
+while [ $c -gt 0 ]
+do
+gpio write 0 1
+sleep 0.5
+gpio write 0 0
+sleep 0.5
+declare -i c=c-1
+done
