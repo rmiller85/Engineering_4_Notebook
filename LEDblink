@@ -1,6 +1,7 @@
 #GPIO Pins
 #by Meg Gist 
 #Stolen by Rowan
+#Note by Rowan: I did the assignment but the file got lost in terminal somehow so Meg was kind enough to let me just use hers. We were working on the assignment together so they're virtually identical.
 
 declare -i c=10
 gpio mode 0 out
