@@ -2,14 +2,14 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 count = 10
-#the counter! declared simply!!
+#sets number of times to loop
 GPIO.setmode(GPIO.BOARD)
 #setmode needed before setup
 GPIO.setup(11, GPIO.OUT)
-#numb 11 for pin 17 on the pi
+#number 11 for pin 17 on the pi
 
 while count > 0:
-  #LEDs blinks 10 times
+  #loops (and LED blinks) until counter reaches zero
   GPIO.output(11, 1)
   sleep(0.5)
   GPIO.output(11, 0)
