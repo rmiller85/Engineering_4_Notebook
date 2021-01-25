@@ -17,5 +17,5 @@ while 1 == 1:
 		roll = randint(1,20) # takes a random number between 1 & 20 and saves it as the result of the roll.
 	else:
 		roll = randint(1,6) # takes a random number between 1 & 6 and saves it as the result of the roll.
-	print roll # outputs the result of the roll.
+	print(roll) # outputs the result of the roll.
 
