@@ -60,7 +60,7 @@ while True:
     # type in the accel results
     
     # Draw a black filled box to clear the image.
-    draw.rectangle((0,0,width,height), outline=0, fill=0)
+#    draw.rectangle((0,0,width,height), outline=0, fill=0)
     
     draw.text((0,0),"hi", font=font, fill=255)
 
