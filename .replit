@@ -1,2 +1,2 @@
 language="python"
-run="python3 Python/dice_roller.py"
+run="python3 I2C_intro.py"

@@ -49,8 +49,6 @@ x = 1
 # Load default font.
 font = ImageFont.load_default()
 
-print(font)
-
 while True:
     # Read the X, Y, Z axis acceleration values and print them.
     accel, mag = lsm303.read()
@@ -60,7 +58,7 @@ while True:
     # type in the accel results
     
     # Draw a black filled box to clear the image.
-#    draw.rectangle((0,0,width,height), outline=0, fill=0)
+    draw.rectangle((0,0,width,height), outline=0, fill=0)
     
     draw.text((0,0),"hi", font=font, fill=255)
 
@@ -68,5 +66,6 @@ while True:
     # Wait half a second and repeat.
     # Display image.
     disp.image(image)
+    disp.display()
     time.sleep(0.5)
     disp.clear()
