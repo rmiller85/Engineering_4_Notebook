@@ -60,9 +60,7 @@ while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0,0,width,height), outline=0, fill=0)
     
-    draw.text((0,0),"hi", font=font, fill=255)
-
-    # draw.text((x, top),'Accel X={0}, Accel Y={1}, Accel Z={2}, Mag X={3}, Mag Y={4}, Mag Z={5}'.format(accel_x, accel_y, accel_z, mag_x, mag_y, mag_z), font=font, fill=255)
+    draw.text((x, top),'Accel X={0}, Accel Y={1}, Accel Z={2}, Mag X={3}, Mag Y={4}, Mag Z={5}'.format(accel_x, accel_y, accel_z, mag_x, mag_y, mag_z), font=font, fill=255)
     # Wait half a second and repeat.
     # Display image.
     disp.image(image)
