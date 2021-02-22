@@ -1,6 +1,6 @@
 # Headless
 # By Rowan & Meg
-# https://pillow.readthedocs.io/en/stable/reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.line
+
 import time
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
@@ -44,24 +44,50 @@ x = 1
 # loads the default font
 font = ImageFont.load_default()
 
-points = []
+xval = []
+yval = []
+
+for i in range(26):
+  xval.append(i*5)
+
+# screen dimensions: 64x128
 
 while True:
-    disp.display()
-    time.sleep(0.5)
-    disp.clear()
-    # read X, Y, Z values and print them
-    accel, mag = lsm303.read()
-    accel_y = accel
-    mag_y = mag
-    # type in the accel results
+  time.sleep(0.5)
+  disp.clear()
     
-  #  points.append(0, accel_y)
+  accel, mag = lsm303.read()
+  a, accel_y, b = accel
+  mag_y = mag
+  # type in the accel results
+  y = round((accel_y / 10),2)
+  if len(yval) > 25:
+    yval.pop(0) 
+  yval.append(y)
 
-    draw.line((1, 1, 1, 64), fill=255)
-    
-    disp.image(image)
+# draw the axes
+  draw.line((1, 1, 1, 64), fill=255)
+  draw.line((1, 63, 126, 63), fill=255)
+
+  if len(yval) > 1:
+    if len(yval) > 25:
+      draw.rectangle((2,0,width,height), outline=0, fill=0)
+      draw.line((1, 1, 1, 63), fill=255)
+      draw.line((1, 63, 126, 63), fill=255)
+    for i, d in enumerate(yval):
+      if i > 0:
+        x1 = xval[i]
+        y1 = 64 - d
+        x2 = xval[i-1]
+        y2 = 64 - yval[i-1]
+        print((x1, y1, x2, y2))
+        print(d)
+        draw.line((x1, y1, x2, y2), fill=255)
+
+  disp.image(image)
+  disp.display()
     # disp.display() is needeed here
 
     # ImageDraw.line(points, fill=None, width=1, joint=None)
     # syntax to draw a line
+
