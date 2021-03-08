@@ -23,3 +23,11 @@ We started off by copy-pasting the code for the screen onto a new file, called `
 We quickly ran into an issue. The text, after being printed, didn't go anywhere, so it kept looping and overlapping text on text. Easy fix, right? Just throw in a `disp.clear()`? Wrong. Turns out, `disp.clear()` turns off all the lights on the screen, but the actual data of what the screen ought to look like remains unchanged. So things were still overlapping, but the screen was also flashing black with every loop. Turns out what we needed to do was create a black rectangle over the whole screen (well, that was at least the solution we came up with), making the text go on, then emptiness covers it up, then the next set of results come in, etc, etc. The other major issue we ran into was the screen simply refusing to turn on. Gave us a serious headache, but it turned out that we just had a slight syntax mistake.
 
 Meg and I learned tons of new syntax for this assignment. The screen and accelerometer we used had lots of new commands to learn. Truth be told, we didn't really understand how some parts of it worked, but the job was complete, so the real learning would have to come during our next assignment: Headless.
+
+### Headless
+
+will deal with that catastrophe later
+
+### Pi Camera
+
+For this assignment, Meg and I hooked up a camera to our pi. We learned some syntax which takes and saves pictures using the camera. All in all, it was a very straightforward task. The only real hiccup was actually the very beginning, when we were trying to get the camera to respond to the pi. Turns out we had misinterpreted the instructions. For any fellow students struggling with plugging in their camera, it should go in as follows: On the pi, the dark side of the plug should face up. On the camera, the dark side faces opposite from the lens. This means that either the pi will sit upside down or the camera will.
